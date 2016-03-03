@@ -13,11 +13,11 @@ namespace ServidorGcm
     public interface IMiServicioGcm
     {
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle=WebMessageBodyStyle.WrappedResponse)]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         string RegistroGcm(string imei, string registrationId);
 
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedResponse)]
+        [WebGet(ResponseFormat = WebMessageFormat.Json)]
         string EnviaMensaje(string imei, string mensaje);
     }
 }
